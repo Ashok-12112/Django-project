@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django Data</title>
+</head>
+<body>
+
+<h1>Name: {{ name }}</h1>
+<h2>Age: {{ age }}</h2>
+
+<hr>
+
+<h2>Skills</h2>
+<p>{{ skills }}</p>
+
+<hr>
+
+<h2>Students</h2>
+
+<h3>1. {{ students.0.name }} - {{ students.0.age }}</h3>
+<h3>2. {{ students.1.name }} - {{ students.1.age }}</h3>
+<h3>3. {{ students.2.name }} - {{ students.2.age }}</h3>
+
+<hr>
+
+<h2>Profile</h2>
+
+<p>Email: {{ profile.personal.email }}</p>
+<p>Phone: {{ profile.personal.phone }}</p>
+
+</body>
+</html>
