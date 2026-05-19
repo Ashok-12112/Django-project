@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashok Kumar Nayak</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    {% include "main/navbar.html" %}
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Ashok Kumar <span>Nayak</span></h1>
+        <h2><span>Django Developer</span></h2>
+      </div>
+      <div class="hero-image">
+        <img src="{% static 'images/home.jpg' %}" alt="Ashok Kumar Nayak">
+      </div>
+    </section>
+
+    {% include "main/footer.html" %}
+</body>
+</html>
