@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Data :-</h1>
+    <hr>
+
+    {% comment %} IF-Else {% endcomment %}
+
+    {% if blogs.0.is_featured %}
+        <h1>True - Author : {{ blogs.0.author }}</h1>
+    {% else %}
+        <h1>False - Author : {{ blogs.0.author }}</h1>
+    {% endif %}
+
+    <hr>
+
+    {% comment %} For Loop {% endcomment %}
+
+    <table border="1px">
+
+        <tr>
+            <th>SLNO</th>
+            <th>Title</th>
+            <th>Is Featured</th>
+            <th>Author</th>
+        </tr>
+
+        {% for blog in blogs %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ blog.title }}</td>
+            <td>{{ blog.is_featured }}</td>
+            <td>{{ blog.author }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <hr>
+
+    {% verbatim %}
+    <h1>{{ blogs.0.author }}</h1>
+    {% endverbatim %}
+
+</body>
+</html>
